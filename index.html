@@ -11,10 +11,42 @@
 </head>
 
 <body>
-  <div class="container"> <!--.container,-->
-    
+  <div class="container"> <!-- .container,-->
+    <div class="content"> <!-- .logo+.image+.text, -->
+
+      <div class="logo">
+        <img src="images/logo.svg" alt="" />
+      </div>
+      <div class="image">
+        <img src="" alt="">
+      </div>
+      <div class="text">
+        Start for free & get <br> attractive offers today!
+      </div>
+
+    </div>
     <form id="form"> 
-      <div class="title">Get Started</div> <!--.title,-->
+      <div class="social">
+        <div class="title">Get Started</div> <!-- .title,-->
+        <div class="question">
+          Already have an account? <br />
+          <span>log in</span>
+        </div>
+
+        <div class="btn"> <!-- .btn-1+.btn-2, -->
+          <div class="btn-1"> <!-- google button -->
+            <img src="https://img.icons8.com/color/30/000000/google-logo.png" />
+            sign up
+          </div> 
+          <div class="btn-2"> <!-- facebook button -->
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" />
+            sign up
+          </div> 
+        </div>
+        
+        <div class="or">Or</div>
+      </div>
+
       
       <!--! user name input -->
       <div>
@@ -51,7 +83,7 @@
         <label for="password">Password</label>
         <i class="fas fa-lock"></i>
         <input 
-          type="email" 
+          type="password" 
           name="password" 
           id="password" 
           placeholder="Password Here.."
@@ -60,12 +92,13 @@
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div> 
       </div>
+      
       <!--! submit button-->
-      <button type="submit" id="submit">Submit</button> <!--button:submit,-->
+      <button type="submit" id="submit">Submit</button> <!-- button:submit, -->
     </form>
   
   </div>
 </body>
 
-<script> src="main.js" </script>
+<script src="main.js"></script>
 </html>

@@ -7,13 +7,46 @@
 
 body {
   font-family: sans-serif;
-  
+}
+
+.container {
+  display: flex;
+}
+
+/*! style rules for content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f2796e;
+  width: 55%;
+  min-height: 100vh;
+  padding: 10px 20px;
+}
+
+.image {
+  background-image: url("./images/illustration.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* border: 2px solid black; */
+  height: 65%;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 /*! form */
 form { /* form tag */
-  max-width: 400px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* 20% opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  /* max-width: 400px; */
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 10% opacity */
   padding: 50px;
 }
 
@@ -30,7 +63,7 @@ form > div > input { /* parent > children */
   outline: none;
   border: 2px solid #c4c4c4;
   padding: 0 30px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
 }
 
 label {
@@ -42,15 +75,57 @@ form div {
   position: relative; /* placement important, parent div */
   margin-bottom: 15px;  
 }  
+
 /*! for selected input fields */
 input:focus {  
   border: 2px solid #f2796e;
 }
+
+/*! style rules for social section */
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btn-1,
+.btn-2 {
+  padding: 10px 5px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-2 {
+  background-color: #4f70b5;
+  color: white;
+}
+
+.or {
+  text-align: center;
+}
+
+.question {
+  font-size: 15px;
+}
+
+span {
+  color: #f2796e;
+  cursor: pointer;
+}
+
 /*! form icons */
 form div i {
   position: absolute;
   padding: 10px;
 }
+
 .success-icon, 
 .failure-icon {
   right: 0;
@@ -67,7 +142,7 @@ form div i {
 }
 
 .error {
-  font-size: 14px;
+  font-size: 14.5px;
   margin-top: 5px;
 }
 
@@ -82,11 +157,35 @@ button {
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
   transition: all 0.1s ease; /* hover effect */
-
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+/*! media queries */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  form,
+  .content {
+    width: 100%;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+  .image {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 425px) {
+  form {
+    padding: 20px;
+  }
 }
